@@ -13,6 +13,8 @@ class User(models.Model):
     phone_no = models.IntegerField()
     join_date = models.DateTimeField(auto_now_add=True, blank=True)
 
+    def __str__(self):
+        return self.first_name
 
 class Authentication(models.Model):
     username = models.CharField(max_length=120)
